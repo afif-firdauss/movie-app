@@ -1,0 +1,115 @@
+.movies {
+  min-height: 100vh;
+}
+
+.movie {
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  min-height: 100vh;
+}
+
+.movie-card {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.movie-card p {
+  padding-top: 10px;
+  font-weight: bold;
+  word-wrap: break-word;
+  color: #02416b;
+  margin-top: auto;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.movie-card img:hover {
+  -webkit-transform: scale(1.03);
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 2.2rem;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a{
+  background-color:  #02416b ;
+  border-color:  #02416b ;
+  color: #fff;
+}
+.pagination > li > a{
+  /* border: 1px solid  #02416b ; */
+  padding: 5px 10px;
+  outline: none;
+  color:  #fff;
+  cursor: pointer;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color:  #02416b ;
+  border-color:  #02416b;
+  color:  #fff !important;
+  outline: none ;
+  font-weight: 500;
+  /* border-radius: 50% !important; */
+}
+.pagination > li > a, .pagination > li > span{
+  color:  #fff;
+}
+a{
+  text-decoration: none !important;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+  border-radius: unset;
+  font-weight: bold;
+  color: #02416b;
+}
+
+
+@media screen and (max-width: 900px) {
+  .movie {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .movie-card  p {
+    margin-top: 10px;
+    font-weight: bold;
+    word-wrap: break-word;
+  }
+
+  .movie-card img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .movie {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+

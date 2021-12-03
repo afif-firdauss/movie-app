@@ -1,0 +1,16 @@
+.input {
+  display: flex;
+  flex-direction: column;
+}
+
+.input label {
+  font-weight: 500;
+  color: #02416b;
+  margin-bottom: 4px;
+}
+
+.input input {
+  padding: 10px;
+  border: 1px solid #02416b;
+  border-radius: 3px;
+}

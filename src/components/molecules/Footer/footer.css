@@ -1,0 +1,62 @@
+.footer {
+  background-color: #02416b;
+  color: white;
+  }
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.api {
+  display: flex;
+  gap: 30px;
+}
+
+.image-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.api p {
+  margin-bottom: 5px;
+}
+
+.image-2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: #012842;
+}
+
+.copyright p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.copyright span {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {    
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: initial;
+  }
+  
+  .api {
+    flex-direction: column;
+  }
+  
+  .image-1 img {
+    width: 50px;
+  }
+}

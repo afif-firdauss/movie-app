@@ -1,0 +1,18 @@
+
+.movie-card-loader {
+  animation: pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  background-color: rgb(243, 243, 243);
+  width: 100%;
+  min-height: 300px;
+  flex: 1; 
+  border-radius: 10px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  25%, 50%, 75% {
+    opacity: .5;
+  }
+}

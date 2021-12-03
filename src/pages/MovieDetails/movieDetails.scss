@@ -1,0 +1,197 @@
+.movie-details {
+  display: flex;
+  flex-direction: column;
+
+  .main-detail {
+    margin: 40px auto 20px auto;
+    flex: 1;
+
+    .header-cast {
+      margin-top: 30px;
+    }
+
+    .movie-detail-top {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 50px;
+
+      .movie-image {
+        .poster {
+          height: 500px;
+          border-radius: 10px;
+          box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.2);
+        }
+      }
+
+      .movie-overview {
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+
+        .btn-group {
+          display: flex;
+          gap: 15px;
+
+          .trailer {
+            width: max-content;
+            padding: 12px 30px;
+            border-radius: 3px;
+            border: none;
+            background-color: #02416b;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.6s ease;
+            margin-top: 10px;
+      
+            &:hover {
+              opacity: 0.9;
+              transform: translateY(-2px);
+            }
+          }
+          
+          .reviews {
+            width: max-content;
+            padding: 12px 30px;
+            border-radius: 3px;
+            border: none;
+            background-color: #e99700;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.6s ease;
+            margin-top: 10px;
+      
+            &:hover {
+              opacity: 0.9;
+              transform: translateY(-2px);
+            }
+          }
+        }
+
+        h1 {
+          font-weight: bold;
+        }
+
+        .rating {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          margin-bottom: 16px;
+
+          img {
+            width: 50px;
+          }
+
+          .score {
+            line-height: 1.5rem;
+            p {
+              margin: 0;
+
+              span {
+                font-size: 2.4rem;
+                font-weight: bold;
+              }
+            }
+
+            .total-score {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .movie-detail-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .cast-card {
+        width: 100px;
+        
+        
+        img {
+          width: 100%;
+          border-radius: 5px;
+        }
+
+        h5 {
+          margin-top: 5px;
+          font-size: 16px;
+        }
+
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+
+    h2 {
+      margin: 30px 0;
+      font-weight: bold;
+      color: #02416b;
+      padding-left: 10px;
+      border-left-color: #02416b;
+      border-left-width: 8px;
+      border-left-style: solid;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .main-detail {
+    margin: 10px auto 40px auto;
+
+    .background {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+    .movie-detail-top {
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      .movie-image {
+
+        .poster {
+          display: none;
+        }
+
+        .background {
+          display: inline;
+          visibility: visible;
+          width: 100%;
+        }
+      }
+
+      .movie-overview {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: 100%;
+
+        .btn-group {
+          display: flex;
+    
+          .trailer {
+            padding: 12px 20px;
+          }
+          
+          .reviews {
+            padding: 12px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    .main-detail {
+      margin: 15px auto 30px auto !important;
+    }
+  }
